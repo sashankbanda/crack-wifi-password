@@ -131,7 +131,7 @@ This guide is for **educational purposes only**. The author is **not responsible
 
 -------------------------------
 
-## **Wifite**
+## **💀 Wifite**
 Using `wifite` is a good choice for automated Wi-Fi cracking, but it's important to note that cracking Wi-Fi passwords without authorization is illegal and unethical. Since you mentioned that you are authorized to test the security of the assets, I'll provide you with the steps to use `wifite` to crack the password of a Wi-Fi network using a TP-Link TL-WN722N v2/v3 with the Realtek RTL8188EUS chipset.
 
 Here are the steps:

@@ -128,3 +128,64 @@ By following these steps, you can ethically test the security of your own Wi-Fi 
 ### **Disclaimer**
 This guide is for **educational purposes only**. The author is **not responsible** for any misuse of this information. Always obtain **legal authorization** before performing penetration testing on any network.
 
+
+-------------------------------
+
+## **Wifite**
+Using `wifite` is a good choice for automated Wi-Fi cracking, but it's important to note that cracking Wi-Fi passwords without authorization is illegal and unethical. Since you mentioned that you are authorized to test the security of the assets, I'll provide you with the steps to use `wifite` to crack the password of a Wi-Fi network using a TP-Link TL-WN722N v2/v3 with the Realtek RTL8188EUS chipset.
+
+Here are the steps:
+
+1. **Install `wifite`**:
+   First, you need to install `wifite` on your system. You can do this using the following commands:
+
+   ```bash
+   sudo apt update
+   sudo apt install git
+   git clone https://github.com/derv82/wifite.git
+   cd wifite
+   sudo python3 setup.py install
+   ```
+
+2. **Install Required Dependencies**:
+   `wifite` requires several dependencies to function properly. You can install them using:
+
+   ```bash
+   sudo apt install python3-pip
+   sudo pip3 install -r requirements.txt
+   ```
+
+3. **Start `wifite`**:
+   Once `wifite` is installed, you can start it by running:
+
+   ```bash
+   sudo wifite
+   ```
+
+4. **Select the Target Network**:
+   `wifite` will scan for available Wi-Fi networks. Select the target network by entering the corresponding number.
+
+5. **Choose the Attack Method**:
+   `wifite` supports various attack methods. For a TP-Link TL-WN722N v2/v3 with the Realtek RTL8188EUS chipset, you can use the following methods:
+
+   - **Deauth Attack**: This method sends deauthentication packets to force clients to reconnect, capturing the handshake.
+   - **WPS Attack**: If the target network has WPS enabled, you can use a WPS attack to retrieve the password.
+
+   To perform a deauth attack, select option `1` (Deauth Attack) when prompted.
+
+6. **Capture the Handshake**:
+   `wifite` will automatically capture the handshake once a client reconnects. You can then use the captured handshake to crack the password.
+
+7. **Crack the Password**:
+   After capturing the handshake, `wifite` will attempt to crack the password using a wordlist. You can specify a custom wordlist if needed.
+
+   ```bash
+   sudo wifite --wordlist /path/to/your/wordlist.txt
+   ```
+
+8. **Monitor Progress**:
+   `wifite` will display the progress of the cracking attempt. Once the password is cracked, it will be displayed on the screen.
+
+Remember, these steps are for educational purposes only and should only be performed on networks for which you have explicit permission to test.
+
+If you encounter any issues or need further assistance, feel free to ask!

